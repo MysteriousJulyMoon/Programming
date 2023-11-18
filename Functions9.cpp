@@ -1,8 +1,6 @@
-#include <iostream>
 #include "Functionss.hpp"
+#include <iostream>
 using namespace std;
-#define Columns 100
-
 namespace mt
 {
 	void Read(int matrix[Columns][Columns], int& n, int& m)
@@ -80,28 +78,5 @@ namespace mt
 				}
 		return maxPrime;
 	}
-
-
-
-	int main()
-	{
-		int n, m;        //Определение переменных
-		int matrix[Columns][Columns];
-
-		Read(matrix, n, m);    //Ввод
-
-		//Проверка на одинаковость строк
-		if (isEqualRowExists(matrix, n, m))
-		{
-			int maxPrime = findMaxPrime(matrix, n, m);
-			replaceMaxElements(matrix, n, m, maxPrime);
-			cout << maxPrime << endl;
-		}
-
-		Write(matrix, n, m);
-		return 0;
-
-	}
-
 }
 
