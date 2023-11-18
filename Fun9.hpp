@@ -13,4 +13,6 @@ namespace mt
 
 		bool isPrime(int x);
 
+		int findMaxPrime(int matrix[Columns][Columns], int n, int m);
+
 }
